@@ -1,20 +1,16 @@
 import streamlit as st
-from utils.db import init_db
-from views import cadastro, conteudo, dashboard
+from views import cadastro_produto, dashboard, assistente_ia, carrinho
 
-# Inicializa banco
-init_db()
-st.title("🥷 SofIA")
-# Menu
-st.sidebar.title("📌 Menu")
-opcao = st.sidebar.radio("Navegação", ["Cadastro","Dashboard", "Conteúdo","Documentos"])
+st.set_page_config(page_title="🛒 Loja Online", layout="wide")
 
-if opcao == "Cadastro":
-    cadastro.show()
-elif opcao == "Conteúdo":
-    conteudo.show()
-elif opcao == "Dashboard":
-    dashboard.show()
-elif opcao == "Documentos":
-    pass 
-  
+st.sidebar.title("Menu")
+pagina = st.sidebar.radio("Escolha:", ["Cadastro de Produtos", "Carrinho", "Dashboard", "Assistente IA"])
+
+if pagina == "Cadastro de Produtos":
+    cadastro_produto.exibir()
+elif pagina == "Carrinho":
+    carrinho.exibir()
+elif pagina == "Dashboard":
+    dashboard.exibir()
+else:
+    assistente_ia.exibir()
