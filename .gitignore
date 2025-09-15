@@ -1,2 +1,41 @@
+# Ambiente virtual
 venv/
-doc/
+.venv/
+env/
+ENV/
+
+# Cache e compilados Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Configs locais
+*.log
+*.sqlite3
+.DS_Store
+
+# Dados gerados
+data/*.csv
+!data/.gitkeep   # mantém a pasta mas ignora os arquivos CSV
+
+# Streamlit
+.streamlit/secrets.toml
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos temporários
+*.tmp
+*.bak
+
+# Jupyter (se usar)
+.ipynb_checkpoints/
