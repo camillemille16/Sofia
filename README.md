@@ -1,20 +1,6 @@
-# python -m venv venv
+# 🛒 Loja Sofia – E-commerce com IA (Groq + Streamlit)
 
-# .\venv\Scripts\activate
+Bem-vindo à Loja Sofia, uma plataforma de e-commerce construída com **Python + Streamlit**, integrada com **Groq** para oferecer um assistente virtual inteligente que auxilia na navegação e compra de produtos.
 
-# python.exe -m pip install --upgrade pip
+## 📂 Estrutura do Projeto
 
-# pip install load_dotenv
-
-# pip install streamlit langchain openai pandas PyPDF2 faiss-cpu tiktoken
-
-# pip install --upgrade langchain
-
-# pip install -U langchain-community
-
-# pip install openpyxl
-
-# pip install langchain-groq
-
-# pip freeze > requirements.txt
- 
