@@ -1,16 +1,20 @@
 import streamlit as st
-from views import cadastro_produto, dashboard, assistente_ia, carrinho
+import pandas as pd
+from views import cadastro_produto, carrinho, dashboard, assistente_ia
 
-st.set_page_config(page_title="🛒 Loja Online", layout="wide")
+st.set_page_config(page_title="Loja Sofia", layout="centered")
+
+st.title("Bem-vindo à Loja Sofia")
+st.write("Explore nossos produtos, faça compras e interaja com nosso assistente virtual.")
 
 st.sidebar.title("Menu")
-pagina = st.sidebar.radio("Escolha:", ["Cadastro de Produtos", "Carrinho", "Dashboard", "Assistente IA"])
+pagina = st.sidebar.radio("Escolha uma opção:", ["Produtos", "Carrinho", "Dashboard", "Assistente Virtual"])
 
-if pagina == "Cadastro de Produtos":
-    cadastro_produto.exibir()
+if pagina == "Produtos":
+    cadastro_produto.exibir_produtos()
 elif pagina == "Carrinho":
-    carrinho.exibir()
+    carrinho.exibir_carrinho()
 elif pagina == "Dashboard":
-    dashboard.exibir()
-else:
-    assistente_ia.exibir()
+    dashboard.exibir_dashboard()
+elif pagina == "Assistente Virtual":
+    assistente_ia.interagir_com_assistente()
